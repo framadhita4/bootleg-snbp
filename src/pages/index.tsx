@@ -9,7 +9,7 @@ export default function Home() {
   const InputElm = ({id, placeholder, label}:{id: string, placeholder: string, label: string}) => {
     return <>
     { label !== "" && <p className="mb-2">{label}</p> }
-    <input required onChange={e => e.target.value = e.target.value.toUpperCase()} type="text" id={id} name={id} className="h-9 rounded-md w-full bg-neutral-500 p-2 font-bold text-white placeholder:text-neutral-400 mb-2" placeholder={placeholder}/>
+    <input required type="text" id={id} name={id} className="h-9 rounded-md w-full bg-neutral-500 p-2 font-bold text-white placeholder:text-neutral-400 mb-2" placeholder={placeholder}/>
     </>
   }
 

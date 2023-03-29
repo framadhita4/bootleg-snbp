@@ -40,19 +40,19 @@ export default function Page() {
       <div className="p-5 font-bold text-[#88CCF0]">
         <Image className="w-24 mb-4 md:w-48" src={"/qr.png"} width={200} height={200} alt={"tes"}></Image>
         <p className="text-[14px]">NISN 0049120937 - NOREG 421486749</p>
-        <h1 className="text-white text-3xl mb-1">{data.nama.toUpperCase()}</h1>
+        <h1 className="text-white text-3xl mb-1">{(data.nama || "").toUpperCase()}</h1>
         <div className="font-[500] text-md leading-[18px] text-[#b9b9b9] mb-4">
-          <p>{data.prodi.toUpperCase()}</p>
-          <p>{data.ptn.toUpperCase()}</p>
+          <p>{(data.prodi || "").toUpperCase()}</p>
+          <p>{(data.ptn || "").toUpperCase()}</p>
         </div>
         <p className="text-[14px] leading-4">Tanggal Lahir</p>
-        <h1 className="text-white text-lg mb-4">{data.tanggal.toUpperCase()}</h1>
+        <h1 className="text-white text-lg mb-4">{(data.tanggal || "").toUpperCase()}</h1>
         <p className="text-[14px] leading-4">Asal Sekolah</p>
-        <h1 className="text-white text-lg mb-4">{data.sekolah.toUpperCase()}</h1>
+        <h1 className="text-white text-lg mb-4">{(data.sekolah || "").toUpperCase()}</h1>
         <p className="text-[14px] leading-4">Kabupaten/Kota</p>
-        <h1 className="text-white text-lg mb-4">{capitalizeEachWord(data.kota.toUpperCase())}</h1>
+        <h1 className="text-white text-lg mb-4">{capitalizeEachWord((data.kota || "").toUpperCase())}</h1>
         <p className="text-[14px] leading-4">Provinsi</p>
-        <h1 className="text-white text-lg mb-4">Prov. {capitalizeEachWord(data.prov.toUpperCase())}</h1>
+        <h1 className="text-white text-lg mb-4">Prov. {capitalizeEachWord((data.prov || "").toUpperCase())}</h1>
         <div className="w-full bg-white p-2">
           <h1 className="text-neutral-600 leading-5">Silahkan lakukan pendaftaran ulang</h1>
           <p className="text-[12px] leading-[14px] text-neutral-400 mb-1">Informasi pendaftaran ulang di PTN/Politeknik Negeri dapat dilihat pada link berikut:</p>
